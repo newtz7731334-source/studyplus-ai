@@ -1,4 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion';
+import { Loader2 } from 'lucide-react';
 import { useCallback, useMemo, useState } from 'react';
 import { Header } from '@/components/Header';
 import { Sidebar, NAV_ITEMS } from '@/components/Sidebar';
@@ -9,6 +10,8 @@ import { Flashcards } from '@/modules/Flashcards';
 import { Planner } from '@/modules/Planner';
 import { Tutor } from '@/modules/Tutor';
 import { Focus } from '@/modules/Focus';
+import { Login } from '@/modules/Login';
+import { AuthProvider, useAuth } from '@/lib/auth';
 import { ThemeProvider } from '@/lib/theme';
 import { ToastProvider } from '@/lib/toast';
 import { useStats } from '@/lib/useStats';
@@ -16,6 +19,21 @@ import { storage } from '@/lib/storage';
 import type { FocusSession, ModuleKey, QuizAttempt } from '@/types';
 
 function Shell() {
+  const { user, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-slate-50 dark:bg-slate-950">
+        <Loader2 className="h-8 w-8 animate-spin text-brand-500" />
+      </div>
+    );
+  }
+
+  if (!user) return <Login />;
+  return <StudySuite />;
+}
+
+function StudySuite() {
   const [active, setActive] = useState<ModuleKey>('overview');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const { stats, update, recomputeMastery } = useStats();
@@ -81,7 +99,9 @@ export default function App() {
   return (
     <ThemeProvider>
       <ToastProvider>
-        <Shell />
+        <AuthProvider>
+          <Shell />
+        </AuthProvider>
       </ToastProvider>
     </ThemeProvider>
   );

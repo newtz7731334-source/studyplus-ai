@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { Flame, Menu, Moon, Sun, Target, Zap } from 'lucide-react';
+import { Flame, LogOut, Menu, Moon, Sun, Target, Zap } from 'lucide-react';
+import { useAuth } from '@/lib/auth';
 import { useTheme } from '@/lib/theme';
 import type { UserStats } from '@/types';
 
@@ -13,6 +14,7 @@ export function Header({
   title: string;
 }) {
   const { theme, toggle } = useTheme();
+  const { user, signOut } = useAuth();
 
   const chips = [
     { icon: Flame, label: 'Streak', value: `${stats.streak}d`, tone: 'text-amber-500' },
@@ -70,6 +72,31 @@ export function Header({
         aria-label="Toggle theme"
       >
         {theme === 'dark' ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+      </motion.button>
+
+      <div className="ml-1 hidden items-center gap-2 sm:flex">
+        <div className="hidden max-w-[160px] truncate text-right text-xs leading-tight text-slate-500 dark:text-slate-400 md:block">
+          <p className="font-semibold text-slate-700 dark:text-slate-200">{user?.email}</p>
+          <p className="text-[10px]">Signed in</p>
+        </div>
+        <motion.button
+          whileTap={{ scale: 0.9 }}
+          onClick={() => signOut()}
+          className="rounded-xl border border-slate-200 bg-white/60 p-2 text-slate-600 transition hover:bg-rose-50 hover:text-rose-500 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300 dark:hover:bg-rose-500/10"
+          aria-label="Sign out"
+          title="Sign out"
+        >
+          <LogOut className="h-5 w-5" />
+        </motion.button>
+      </div>
+
+      <motion.button
+        whileTap={{ scale: 0.9 }}
+        onClick={() => signOut()}
+        className="ml-1 rounded-xl border border-slate-200 bg-white/60 p-2 text-slate-600 transition hover:bg-rose-50 hover:text-rose-500 dark:border-slate-800 dark:bg-slate-900/60 dark:text-slate-300 dark:hover:bg-rose-500/10 sm:hidden"
+        aria-label="Sign out"
+      >
+        <LogOut className="h-5 w-5" />
       </motion.button>
     </header>
   );
