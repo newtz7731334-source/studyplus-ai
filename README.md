@@ -29,3 +29,22 @@ The application leverages the **Google Gemini API** to process text, images, and
 1. Clone the repository:
    ```bash
    git clone [https://github.com/newtz7731334-source/studyplus-ai.git](https://github.com/newtz7731334-source/studyplus-ai.git)
+## App Screenshots
+
+### Login Page
+![Login page](Pahli_Image_Ka_Link_Yahan_Aaye_Ga)
+
+### Dashboard with Stats
+![Dashboard with stats](Dusri_Image_Ka_Link_Yahan_Aaye_Ga)
+
+### Document Library
+![Document library](Teesri_Image_Ka_Link_Yahan_Aaye_Ga)
+
+### MCQ Quiz Page
+![MCQ quiz page](Chothi_Image_Ka_Link_Yahan_Aaye_Ga)
+
+### Flashcards Page
+![Flashcards page](Panchvi_Image_Ka_Link_Yahan_Aaye_Ga)
+
+### Mobile Viewport (375x812)
+![Mobile viewport](Chehri_Image_Ka_Link_Yahan_Aaye_Ga)
