@@ -19,18 +19,36 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    supabase.auth.getSession().then(({ data }) => {
-      setSession(data.session);
-      setLoading(false);
-    });
+    let done = false;
+    const finish = () => {
+      if (!done) {
+        done = true;
+        setLoading(false);
+      }
+    };
+
+    supabase.auth
+      .getSession()
+      .then(({ data, error }) => {
+        if (!error) setSession(data.session);
+      })
+      .catch(() => {})
+      .finally(finish);
+
+    // Safety net: never stay stuck on the loading spinner
+    const timeout = window.setTimeout(finish, 4000);
 
     const { data: sub } = supabase.auth.onAuthStateChange((_event, sess) => {
       (async () => {
         setSession(sess);
+        finish();
       })();
     });
 
-    return () => sub.subscription.unsubscribe();
+    return () => {
+      window.clearTimeout(timeout);
+      sub.subscription.unsubscribe();
+    };
   }, []);
 
   const signIn = async (email: string, password: string) => {
