@@ -71,16 +71,6 @@ StudyPulse AI is an advanced academic suite and study assistant designed to stre
 | **Chat with Document** | Conversational Q&A grounded in uploaded document content |
 | **Mobile Responsive** | Touch-optimized UI, works great on phone screens |
 
-## App Screenshots
-
-| Login Page | Dashboard with Stats | Document Library |
-| :--- | :--- | :--- |
-| ![Login Page](Yahan_Pehli_Tasweer_Ka_Link) | ![Dashboard](Yahan_Dusri_Tasweer_Ka_Link) | ![Documents](Yahan_Teesri_Tasweer_Ka_Link) |
-
-| MCQ Quiz Page | Flashcards Page | Mobile Viewport |
-| :--- | :--- | :--- |
-| ![MCQ Quiz](Yahan_Chothi_Tasweer_Ka_Link) | ![Flashcards](Yahan_Panchvi_Tasweer_Ka_Link) | ![Mobile Viewport](Yahan_Chehri_Tasweer_Ka_Link) |
-
 ## Tech Stack
 
 | Layer | Technology |
