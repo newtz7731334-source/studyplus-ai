@@ -32,19 +32,21 @@ The application leverages the **Google Gemini API** to process text, images, and
 ## App Screenshots
 
 ### Login Page
-![Login page](Pahli_Image_Ka_Link_Yahan_Aaye_Ga)
+![Login page](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%201.png)
 
 ### Dashboard with Stats
-![Dashboard with stats](Dusri_Image_Ka_Link_Yahan_Aaye_Ga)
+![Dashboard with stats](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%202.png)
 
 ### Document Library
-![Document library](Teesri_Image_Ka_Link_Yahan_Aaye_Ga)
+![Document library](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%203.png)
 
 ### MCQ Quiz Page
-![MCQ quiz page](Chothi_Image_Ka_Link_Yahan_Aaye_Ga)
+![MCQ quiz page](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2004.png)
 
 ### Flashcards Page
-![Flashcards page](Panchvi_Image_Ka_Link_Yahan_Aaye_Ga)
+![Flashcards page](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2005.png)
 
 ### Mobile Viewport (375x812)
-![Mobile viewport](Chehri_Image_Ka_Link_Yahan_Aaye_Ga)
+![Mobile viewport](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2006.png)
+file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2007.png
+file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2008.png
