@@ -52,3 +52,51 @@ The application leverages the **Google Gemini API** to process text, images, and
 <img width="1589" height="769" alt="page 06" src="https://github.com/user-attachments/assets/6b6ed66b-36c0-4cc2-9316-07ac81e56d2f" />
 <img width="1599" height="766" alt="page 07" src="https://github.com/user-attachments/assets/0cc5e224-abff-4456-9408-a1a72b623e28" />
 <img width="1581" height="765" alt="page 08" src="https://github.com/user-attachments/assets/9fe89af9-83f6-48e7-8ddf-2cc081baf6a4" />
+ StudyPulse AI
+## Overview
+StudyPulse AI is an advanced academic suite and study assistant designed to streamline learning, solve complex problems, and manage academic resources effectively.
+## Live Deployed URL
+* **Live App:** https://studyplus-ai.vercel.app
+## Features
+
+| Feature | Description |
+| :--- | :--- |
+| **Lecture Transcriber** | Audio and notes summary with key takeaways + definitions |
+| **MCQ Quiz** | Interactive quiz with score check/next, end-of-quiz review |
+| **Flashcards** | Flip-card UI with Know It/Review tracking + re-queue |
+| **Socratic Solver** | Step-by-step academic problem solver for math and physics |
+| **Revision Notes** | AI-generated key concepts, study tips, common mistakes |
+| **Study Planner** | Day-by-day plan from today up to exam date |
+| **History & Downloads** | All artifacts filterable by type, downloadable as JSON |
+| **Chat with Document** | Conversational Q&A grounded in uploaded document content |
+| **Mobile Responsive** | Touch-optimized UI, works great on phone screens |
+
+## App Screenshots
+
+| Login Page | Dashboard with Stats | Document Library |
+| :--- | :--- | :--- |
+| ![Login Page](Yahan_Pehli_Tasweer_Ka_Link) | ![Dashboard](Yahan_Dusri_Tasweer_Ka_Link) | ![Documents](Yahan_Teesri_Tasweer_Ka_Link) |
+
+| MCQ Quiz Page | Flashcards Page | Mobile Viewport |
+| :--- | :--- | :--- |
+| ![MCQ Quiz](Yahan_Chothi_Tasweer_Ka_Link) | ![Flashcards](Yahan_Panchvi_Tasweer_Ka_Link) | ![Mobile Viewport](Yahan_Chehri_Tasweer_Ka_Link) |
+
+## Tech Stack
+
+| Layer | Technology |
+| :--- | :--- |
+| **Frontend** | Vite + React + Tailwind CSS |
+| **Backend** | Node.js / Serverless API |
+| **Database** | Supabase Postgres (Auth, Storage, RLS) |
+| **AI Model** | Google Gemini API |
+| **Deployment** | Vercel (Frontend + Serverless) |
+
+## How to Run Locally
+```bash
+# 1. Clone repository
+git clone [https://github.com/newtz7731334-source/studyplus-ai.git](https://github.com/newtz7731334-source/studyplus-ai.git)
+cd studyplus-ai
+# 2. Install dependencies
+npm install
+# 3. Run development server
+npm run dev
