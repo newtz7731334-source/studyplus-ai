@@ -32,21 +32,23 @@ The application leverages the **Google Gemini API** to process text, images, and
 ## App Screenshots
 
 ### Login Page
-![Login page](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%201.png)
+<img width="1591" height="808" alt="page 1" src="https://github.com/user-attachments/assets/5091b218-9fbe-4111-963e-5e5e3837c9a3" />
+
 
 ### Dashboard with Stats
-![Dashboard with stats](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%202.png)
+!<img width="1590" height="763" alt="page 2" src="https://github.com/user-attachments/assets/04587209-dab7-4fc8-86e4-ad625d82d4af" />
+
 
 ### Document Library
-![Document library](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%203.png)
+<img width="1589" height="764" alt="page 3" src="https://github.com/user-attachments/assets/cbfca20d-6958-462d-a956-443dd8e28aec" />
 
 ### MCQ Quiz Page
-![MCQ quiz page](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2004.png)
+<img width="1600" height="769" alt="page 04" src="https://github.com/user-attachments/assets/a0a0e54e-cd69-4d66-9e75-af6d465592b7" />
 
 ### Flashcards Page
-![Flashcards page](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2005.png)
+<img width="1597" height="771" alt="page 05" src="https://github.com/user-attachments/assets/518b0786-26fb-4edc-a80e-36c383982154" />
 
 ### Mobile Viewport (375x812)
-![Mobile viewport](file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2006.png)
-file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2007.png
-file:///C:/Users/dell/Downloads/studyplus-ai-main/studyplus-ai-main/screenshoots/page%2008.png
+<img width="1589" height="769" alt="page 06" src="https://github.com/user-attachments/assets/6b6ed66b-36c0-4cc2-9316-07ac81e56d2f" />
+<img width="1599" height="766" alt="page 07" src="https://github.com/user-attachments/assets/0cc5e224-abff-4456-9408-a1a72b623e28" />
+<img width="1581" height="765" alt="page 08" src="https://github.com/user-attachments/assets/9fe89af9-83f6-48e7-8ddf-2cc081baf6a4" />
