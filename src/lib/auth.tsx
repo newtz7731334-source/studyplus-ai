@@ -27,28 +27,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
     };
 
-    supabase.auth
-      .getSession()
-      .then(({ data, error }) => {
-        if (!error) setSession(data.session);
-      })
-      .catch(() => {})
-      .finally(finish);
+    // Fallback: never stay stuck on the loading spinner
+    const timeout = window.setTimeout(finish, 2000);
 
-    // Safety net: never stay stuck on the loading spinner
-    const timeout = window.setTimeout(finish, 4000);
+    try {
+      supabase.auth
+        .getSession()
+        .then(({ data, error }) => {
+          if (!error) setSession(data.session);
+        })
+        .catch(() => {})
+        .finally(finish);
 
-    const { data: sub } = supabase.auth.onAuthStateChange((_event, sess) => {
-      (async () => {
-        setSession(sess);
-        finish();
-      })();
-    });
+      const { data: sub } = supabase.auth.onAuthStateChange((_event, sess) => {
+        (async () => {
+          setSession(sess);
+          finish();
+        })();
+      });
 
-    return () => {
-      window.clearTimeout(timeout);
-      sub.subscription.unsubscribe();
-    };
+      return () => {
+        window.clearTimeout(timeout);
+        sub.subscription.unsubscribe();
+      };
+    } catch {
+      finish();
+    }
   }, []);
 
   const signIn = async (email: string, password: string) => {

@@ -12,6 +12,7 @@ import { Tutor } from '@/modules/Tutor';
 import { Focus } from '@/modules/Focus';
 import { Login } from '@/modules/Login';
 import { AuthProvider, useAuth } from '@/lib/auth';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ThemeProvider } from '@/lib/theme';
 import { ToastProvider } from '@/lib/toast';
 import { useStats } from '@/lib/useStats';
@@ -99,9 +100,11 @@ export default function App() {
   return (
     <ThemeProvider>
       <ToastProvider>
-        <AuthProvider>
-          <Shell />
-        </AuthProvider>
+        <ErrorBoundary>
+          <AuthProvider>
+            <Shell />
+          </AuthProvider>
+        </ErrorBoundary>
       </ToastProvider>
     </ThemeProvider>
   );
